@@ -15,7 +15,7 @@ lastupdated: "2018-11-30"
 {:download: .download}
 
 # Initiation au pare-feu matériel (dédié)
-{: #getting-started-with-hardware-firewall-dedicated}
+{: #getting-started}
 
 Le pare-feu matériel (dédié) fournit aux clients une couche de sécurité essentielle mise à disposition à la demande sans interruption de service. Il empêche le trafic indésirable d'atteindre vos serveurs, réduisant votre surface d'attaque et permettant aux ressources de vos serveurs d'être consacrées uniquement à l'usage prévu.  
 
@@ -26,6 +26,6 @@ Pour commander un pare-feu matériel (dédié), procédez comme suit :
 3. Faites défiler l'écran jusqu'au réseau local virtuel que vous souhaitez protéger et cliquez sur le lien **Ajouter pare-feu** situé sur la même ligne. Ce lien ouvre la page **Commander Pare-feu Matériel (Dédié)**.
 4. Sélectionnez **Pare-feu matériel (dédié)** pour commander un pare-feu ou **Pare-feu matériel (haute disponibilité)** pour commander deux pare-feux dans une paire à haute disponibilité.
 5. Entrez le mode de paiement de votre choix et cliquez sur **Continuer**.
-6. Dans l'écran suivant, entrez, le cas échéant, les codes promo, lisez et acceptez le contrat cadre de service (MSA) et cliquez sur **Valider la commande**. 
+6. Dans l'écran suivant, entrez, le cas échéant, les codes promo, lisez et acceptez le contrat cadre de service (MSA) et cliquez sur **Valider la commande**.
 
 Une fois le pare-feu matériel (dédié) mis à disposition, vous pouvez [le configurer](/docs/infrastructure/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-configuring-the-hardware-firewall-dedicated-).

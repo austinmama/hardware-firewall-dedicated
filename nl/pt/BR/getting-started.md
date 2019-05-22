@@ -15,7 +15,7 @@ lastupdated: "2018-11-30"
 {:download: .download}
 
 # Introdução ao Hardware Firewall Dedicated
-{: #getting-started-with-hardware-firewall-dedicated}
+{: #getting-started}
 
 O Hardware Firewall (Dedicated) fornece aos clientes uma camada essencial de segurança que é provisionada sob demanda sem interrupções de serviço. Ele evita a ocorrência de tráfego indesejado nos servidores, reduzindo sua superfície de ataque e permitindo que os recursos do servidor sejam dedicados ao uso desejado.  
 
@@ -26,6 +26,6 @@ Para pedir um Hardware Firewall (Dedicated), execute o procedimento a seguir:
 3. Role para a VLAN que você deseja proteger e clique no link **Incluir firewall** na mesma linha. Esse link abre a página **Pedir Hardware Firewall (Dedicated)**.
 4. Selecione **Hardware Firewall (Dedicated)** para pedir um Firewall ou **Hardware Firewall (High Availability)** para pedir dois Firewalls em um par de alta disponibilidade.
 5. Insira sua opção de pagamento e clique em **Continuar**.
-6. Na próxima tela, insira os códigos promocionais, se aplicável, leia e concorde com o Contrato de Prestação de Serviços Principal e clique em **Fazer o pedido**. 
+6. Na próxima tela, insira os códigos promocionais, se aplicável, leia e concorde com o Contrato de Prestação de Serviços Principal e clique em **Fazer o pedido**.
 
 Depois que o Hardware Firewall (Dedicated) for provisionado, será possível [configurá-lo](/docs/infrastructure/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-configuring-the-hardware-firewall-dedicated-).

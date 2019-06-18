@@ -181,7 +181,8 @@ Be sure to add rules for DAL01, DAL10, WDC04, and the location of your server. I
 
 |Datacenter|City|State|Country|IP Range|
 |---|---|---|---|---|
-|All|-|-|-|161.26.0.0/16
+|All|-|-|-|166.8.0.0/14|
+|All|-|-|-|161.26.0.0/16|
 |ams01|Amsterdam|-|NLD|10.2.64.0/20|
 |ams03|Amsterdam|-|NLD|10.3.128.0/20|
 |che01|Chennai|-|IND|10.200.16.0/20|

@@ -4,6 +4,10 @@ copyright:
   years: 2017
 lastupdated: "2018-11-30"
 
+keywords: logs, logging, troubleshooting, firewall
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,11 +17,13 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # 로그 보고서 보기
 {: #viewing-log-reports}
 
-보호된 디바이스로 이동하여 **방화벽** 탭을 선택하고 **조치 > 방화벽 로그**를 선택하여 IP 기준으로 로그를 사용할 수 있습니다. 
+보호된 디바이스로 이동하여 **방화벽** 탭을 선택하고 **조치 > 방화벽 로그**를 선택하여 IP 기준으로 로그를 사용할 수 있습니다.
 
 로그는 .CSV 형식으로 표시되며 다음을 포함합니다.
 

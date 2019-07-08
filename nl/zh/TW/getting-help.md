@@ -4,6 +4,10 @@ copyright:
   years: 2017,2018
 lastupdated: "2018-11-30"
 
+keywords: help, support, troubleshooting
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,6 +17,8 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # 取得 Hardware Firewall (Dedicated) 的協助及支援
 {: #getting-help-and-support-for-hardware-firewall-dedicated-}

@@ -4,6 +4,10 @@ copyright:
   years: 2017
 lastupdated: "2018-11-30"
 
+keywords: logs, logging, troubleshooting, firewall
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,11 +17,13 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # 查看日志报告
 {: #viewing-log-reports}
 
-通过浏览至受保护设备、选择**防火墙**选项卡以及选择**操作 > 防火墙日志**，可以访问每个 IP 的日志。 
+通过浏览至受保护设备、选择**防火墙**选项卡以及选择**操作 > 防火墙日志**，可以访问每个 IP 的日志。
 
 日志以 .CSV 格式提供并包含以下内容：
 

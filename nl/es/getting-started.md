@@ -4,6 +4,10 @@ copyright:
   years: 2017
 lastupdated: "2018-11-30"
 
+keywords: order, firewall
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,6 +17,8 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # Iniciación al cortafuegos de hardware dedicado
 {: #getting-started}
@@ -26,6 +32,6 @@ Para solicitar un cortafuegos de hardware (dedicado), realice el procedimiento s
 3. Desplácese hasta la VLAN que desea proteger y pulse el enlace **Añadir cortafuegos** en la misma fila. Este enlace abre la página **Pedir cortafuegos de hardware (dedicado)**.
 4. Seleccione **Cortafuegos de hardware (dedicado)** para solicitar un cortafuegos o **Cortafuegos de hardware (alta disponibilidad)** para solicitar dos cortafuegos en un par de alta disponibilidad.
 5. Escriba su opción de pago y pulse **Continuar**.
-6. En la pantalla siguiente, especifique los códigos promocionales si procede, lea y acepte el Acuerdo de servicio maestro y pulse **Realizar pedidos**.
+6. En la pantalla siguiente, especifique los códigos promocionales si procede, lea y acepte el Acuerdo de servicio maestro y pulse **Realizar pedido**.
 
 Una vez suministrado el cortafuegos de hardware (dedicado), puede [configurarlo](/docs/infrastructure/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-configuring-the-hardware-firewall-dedicated-).

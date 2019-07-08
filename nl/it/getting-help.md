@@ -4,6 +4,10 @@ copyright:
   years: 2017,2018
 lastupdated: "2018-11-30"
 
+keywords: help, support, troubleshooting
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,13 +17,15 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # Come ottenere aiuto e supporto per Hardware Firewall (Dedicated)
 {: #getting-help-and-support-for-hardware-firewall-dedicated-}
 
 Se hai dei problemi o delle domande quando utilizzi l'Hardware Firewall (Dedicated), puoi ottenere aiuto ricercando le informazioni o facendo delle domande attraverso uno dei forum elencati di seguito. Puoi inoltre aprire un ticket di supporto.
 
-Quando utilizzi i forum per fare una domanda, contrassegnala con tag in modo che possa essere individuata dai team di sviluppo di IBM© Cloud. 
+Quando utilizzi i forum per fare una domanda, contrassegnala con tag in modo che possa essere individuata dai team di sviluppo di IBM© Cloud.
 
 * Se hai domande tecniche sull'Hardware Firewall (Dedicated), inserisci la tua domanda in [Stack Overflow](https://stackoverflow.com/search?q=hardware-firewalls+ibm-cloud) e contrassegnala con le tag "hardware-firewalls" e "ibm-cloud".
 * Per domande sul servizio e sulle istruzioni per l'utilizzo iniziale, utilizza il forum [IBM developerWorks dW Answers](https://developer.ibm.com/answers/topics/hardware-firewalls.html?smartspace=ibm-cloud). Includi le tag "hardware-firewalls" e "ibm-cloud".

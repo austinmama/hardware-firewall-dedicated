@@ -4,6 +4,10 @@ copyright:
   years: 2017
 lastupdated: "2018-11-30"
 
+keywords: logs, logging, troubleshooting, firewall
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,11 +17,13 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # 檢視日誌報告
 {: #viewing-log-reports}
 
-日誌以每個 IP 為基礎提供，方法是導覽至受保護的裝置、選取**防火牆**標籤，然後選取**動作 > 防火牆日誌**。 
+日誌以每個 IP 為基礎提供，方法是導覽至受保護的裝置、選取**防火牆**標籤，然後選取**動作 > 防火牆日誌**。
 
 日誌會以 .CSV 格式呈現，並包含下列項目：
 

@@ -4,6 +4,10 @@ copyright:
   years: 2017
 lastupdated: "2018-11-30"
 
+keywords: logs, logging, troubleshooting, firewall
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,11 +17,13 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # ログ・レポートの表示
 {: #viewing-log-reports}
 
-保護されているデバイスにナビゲートして**「ファイアウォール」**タブを選択し、**「アクション」>「ファイアウォールのログ」**を選択すると、IP ごとのログを入手できます。 
+保護されているデバイスにナビゲートして**「ファイアウォール」**タブを選択し、**「アクション」>「ファイアウォールのログ」**を選択すると、IP ごとのログを入手できます。
 
 ログは .CSV 形式で示され、以下の情報を含んでいます。
 

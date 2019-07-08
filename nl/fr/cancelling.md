@@ -4,6 +4,10 @@ copyright:
   years: 2017, 2018
 lastupdated: "2018-11-30"
 
+keywords: cancel, firewall
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,9 +17,11 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # Annulation d'un pare-feu matériel (dédié)
-:{ #canceling-a-hardware-firewall-dedicated-}
+{: #canceling-a-hardware-firewall-dedicated-}
 
 Les pare-feux peuvent être annulés à tout moment, en procédant comme suit :
 

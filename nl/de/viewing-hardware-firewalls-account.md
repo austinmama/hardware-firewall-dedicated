@@ -4,6 +4,10 @@ copyright:
   years: 2017,2018
 lastupdated: "2018-11-30"
 
+keywords: firewall, vlan, view, portal
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,6 +17,8 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # IBM Firewalls anzeigen
 {: #viewing-your-ibm-firewalls}
@@ -26,26 +32,29 @@ Jede Zeile in der Tabelle stellt ein VLAN in Ihrer Infrastruktur dar. IBM© Clou
 
 Die rechte Spalte "Gateway/Firewall" enthält Details über den implementierten Firewallschutz. Beispiel:
 
-- **Firewall hinzufügen** gibt an, dass in diesem VLAN keine Firewalls für Server vorhanden sind.
-- **Einzeln geschützte Server** gibt an, dass mindestens ein Server eine Hardware-Firewall (freigegeben) verwendet und keine Hardware-Firewall (dediziert), keine FortiGate Security Appliance und kein Netzgateway vorhanden ist. VLAN-Firewalls und Netzgateways können nicht auf einem VLAN mit einzeln geschützten Servern platziert werden.
-- **Firewall-vlanXXXX.networklayer.com** gibt an, dass eine Hardware-Firewall (dediziert) oder eine FortiGate Security Appliance vorhanden ist. Einem VLAN kann nur eine VLAN-Firewall oder ein Netzgateway zugeordnet werden. Ein Server kann jedoch im öffentlichen VLAN durch eine VLAN-Firewall geschützt und im privaten Netz mit einem Netzgateway verknüpft werden.
-- **Gateway-Name** gibt an, dass das VLAN mit diesem Netzgateway verknüpft ist.
+* **Firewall hinzufügen** gibt an, dass in diesem VLAN keine Firewalls für Server vorhanden sind.
+* **Einzeln geschützte Server** gibt an, dass mindestens ein Server eine Hardware-Firewall verwendet und keine Hardware-Firewall (dediziert), keine FortiGate Security Appliance und kein Netzgateway vorhanden ist. VLAN-Firewalls und Netzgateways können nicht auf einem VLAN mit einzeln geschützten Servern platziert werden.
+* **Firewall-vlanXXXX.networklayer.com** gibt an, dass eine Hardware-Firewall (dediziert) oder eine FortiGate Security Appliance vorhanden ist. Einem VLAN kann nur eine VLAN-Firewall oder ein Netzgateway zugeordnet werden. Ein Server kann jedoch im öffentlichen VLAN durch eine VLAN-Firewall geschützt und im privaten Netz mit einem Netzgateway verknüpft werden.
+* **Gateway-Name** gibt an, dass das VLAN mit diesem Netzgateway verknüpft ist.
 
 ## Details zu einzeln geschützten Servern
+{: #individually-protected-servers-details}
 
 Bei VLANs, die **einzeln geschützte Server** im Feld "Gateway/Firewall" enthalten, können Sie auf die zugehörige VLAN-Nummer klicken, um die Details des VLAN einschließlich der zugehörigen Einheiten anzuzeigen.
 
 In der Liste der zugeordneten Einheiten können Sie auf jede Einheit klicken und bis zum Ende der Registerkarte "Konfiguration" blättern. Angezeigt wird **Firewall** im Abschnitt "Add-ons" mit dem Status **Installiert** oder **Nicht installiert**.
 
-- **Nicht installiert** gibt an, dass für diese Einheit keine Firewall vorhanden ist.
-- **Installiert** gibt an, dass eine Firewall vorhanden ist. Auf der Einheit ist eine Registerkarte **Firewall** verfügbar, auf der Sie die Firewallkonfiguration verwalten können.
+* **Nicht installiert** gibt an, dass für diese Einheit keine Firewall vorhanden ist.
+* **Installiert** gibt an, dass eine Firewall vorhanden ist. Auf der Einheit ist eine Registerkarte **Firewall** verfügbar, auf der Sie die Firewallkonfiguration verwalten können.
 
 ## Details zu dedizierten Firewalls
+{: #dedicated-firewall-details}
 
 Bei VLANs, die **Firewall-vlanXXXX.networklayer.com** im Feld "Gateway/Firewall" enthalten, können Sie auf den Firewall-Link klicken, um die Details der Firewall anzuzeigen. Zu den Einheitendetails gehören die zugehörigen Router, VLANs, IPv4/IPv6-Subnetze, die mit diesem VLAN verbundenen Einheiten sowie die Steuerelemente für die Weiterleitung des Datenverkehrs durch oder um die Firewall herum.
 
 Die FortiGate Security Appliance-Einheiten enthalten Verwaltungs-IP-Adresse, Benutzername und Kennwort.  Die Verwaltung der FortiGate Security Appliances erfolgt über eine eigene Benutzerschnittstelle oder eine SSH-basierte Konsole.
 
 ## Details des Netzgateways
+{: #network-gateway-details}
 
 Bei VLANs, die den Einheitennamen des Netzgateways im Feld "Gateway/Firewall" enthalten, können Sie auf den Netzgateway-Namen klicken, um die Details des Netzgateways anzuzeigen. Zu den Einheitendetails gehören die zugehörigen Front-End (FCR)- und Back-End-(BCR)-VLANs und Netzgateway-Verwaltungsoptionen.

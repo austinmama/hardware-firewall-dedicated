@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2018, 2019
+lastupdated: "2019-04-03"
+
+keywords: ip, range, firewall, network, traffic, security
+
+subcollection: hardware-firewall-dedicated
 
 ---
 
@@ -13,6 +17,8 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # Intervalli di IP di IBM Cloud
 {: #ibm-cloud-ip-ranges}
@@ -78,8 +84,8 @@ Una domanda frequente è **Quali intervalli di IP consento tramite il firewall?*
 |wdc06|Washington D.C.|-|USA|169.60.118.0/23|
 |wdc07|Washington D.C.|-|USA|169.61.118.0/23|
 
-Porte da consentire:<br>
-Tutte le porte TCP/UDP<br>
+Porte da consentire:
+Tutte le porte TCP/UDP
 ICMP – ping (per il supporto con il monitoraggio e la risoluzione dei problemi)
 
 ## IP del programma di bilanciamento del carico
@@ -87,7 +93,7 @@ ICMP – ping (per il supporto con il monitoraggio e la risoluzione dei problemi
 |Data center|Città|Stato|Paese|Intervallo di IP|
 |---|---|---|---|---|
 |ams01|Amsterdam|-|NLD|159.253.157.0/24|
-|ams03|Amsterdam|-|NLD|159.8.197.0./24|
+|ams03|Amsterdam|-|NLD|159.8.197.0/24|
 |che01|Chennai|-|IND|169.38.117.0/24|
 |dal01|Dallas|Texas|USA|67.228.66.0/24, 75.126.76.0/24, 174.35.17.0/24, 208.43.15.0/24|
 |dal05|Dallas|Texas|USA|50.23.203.0/24, 108.168.157.0/24 173.192.117.0/24, 192.155.205.0/24|
@@ -157,25 +163,26 @@ ICMP – ping (per il supporto con il monitoraggio e la risoluzione dei problemi
 |TOR|Toronto|-|CAN|158.85.116.0/24|
 |WDC|Washington D.C.|-|USA|50.22.255.0/24|
 
-Porte da consentire: <br>
+Porte da consentire:
 Tutte le porte TCP/UDP
 
 ## Scansioni delle vulnerabilità
-Per garantire il corretto completamento di una scansione della vulnerabilità, permetti l'accesso ai seguenti indirizzi IP: **173.192.255.232** e **172.17.19.38**.
+Per garantire il corretto completamento di una scansione della vulnerabilità Nessus, permetti l'accesso ai seguenti indirizzi IP: **173.192.255.232** e **172.17.19.38**.Per le scansioni nei data center federali, consenti **100.100.1.41** e **100.64.23.41**.
 
 ## Rete di backend (privata)
 
-Blocco IP: il tuo blocco IP privato del server per le comunicazioni ad esso (10.X.X.X/X)<br>
-Porte da consentire:<br>
-ICMP – ping (per il supporto con la risoluzione dei problemi)<br>
-Tutte le porte TCP/UDP<br>
+Blocco IP: il tuo blocco IP privato per le comunicazioni da server a server (10.X.X.X/X)
+Porte da consentire:
+ICMP – ping (per il supporto della risoluzione dei problemi)
+Tutte le porte TCP/UDP
 
 ## Rete del servizio (nella rete di backend/privata)
-Assicurati di aggiungere le regole a DAL01, WDC04 e all'ubicazione del tuo server. Se il tuo server è in un'ubicazione dell'Unione Europea, dovrai aggiungere le regole consentendo il traffico da DAL01, WDC04 e AMS01.
+Assicurati di aggiungere le regole a DAL01, DAL10, WDC04 e all'ubicazione del tuo server. Se il tuo server è in un'ubicazione dell'Unione Europea, dovrai aggiungere le regole consentendo il traffico da DAL01, DAL10, WDC04 e AMS01.
 
 |Data center|Città|Stato|Paese|Intervallo di IP|
 |---|---|---|---|---|
-|Tutti|-|-|-|161.26.0.0/16
+|Tutti|-|-|-|166.8.0.0/14|
+|Tutti|-|-|-|161.26.0.0/16|
 |ams01|Amsterdam|-|NLD|10.2.64.0/20|
 |ams03|Amsterdam|-|NLD|10.3.128.0/20|
 |che01|Chennai|-|IND|10.200.16.0/20|
@@ -224,7 +231,7 @@ Assicurati di aggiungere le regole a DAL01, WDC04 e all'ubicazione del tuo serve
 |wdc07|Washington D.C.|-|USA|10.200.176.0/20|
 
 ## Rete VPN SSL (nella rete di backend/privata)
-ICMP – ping (per il supporto con la risoluzione dei problemi) <br>
+ICMP – ping (per il supporto con la risoluzione dei problemi)
 Tutte le porte TCP/UDP (per l'accesso dalla tua workstation locale)
 
 ## Data center VPN SSL
@@ -355,28 +362,29 @@ Tutte le porte TCP/UDP (per l'accesso dalla tua workstation locale)
 |216.40.193.0/24|
 |216.234.234.0/24|
 
-Se il tuo server utilizza una licenza **Red Hat Enterprise Linux (RHEL)** fornita da SoftLayer, avrai anche bisogno di consentire l'accesso alla seguente rete del servizio, altrimenti gli aggiornamenti e le licenze non funzioneranno correttamente:
+Se il tuo server utilizza una licenza **RHEL (Red Hat Enterprise Linux)** fornita dall'infrastruttura {{site.keyword.data.cloud_notm}}, avrai anche bisogno di consentire l'accesso alla seguente rete del servizio, altrimenti gli aggiornamenti e le licenze non funzioneranno correttamente:
 
 |Ubicazione server|Rete del servizio consentita per questo data center|
 |---|---|
 |Amsterdam (AMS01, AMS03)|LON02|
-|Chennai (CHE01)|TOK02 and SYD01|
+|Chennai (CHE01)|TOK02 e SYD01|
 |Dallas (DAL01, DAL05, DAL07, DAL09)|DAL09|
 |Dallas (DAL06, DAL10)|DAL06|
 |Houston (HOU02)|DAL09|
 |Francoforte (FRA02)|LON02|
-|Hong Kong (HKG02)|TOK02 and SYD01|
+|Hong Kong (HKG02)|TOK02 e SYD01|
 |Londra (LON02)|LON02|
 |Melbourne (MEL01)|SYD01|
 |Messico (MEX01)|DAL06|
 |Milano (MIL01)|LON02|
 |Montreal (MON01)|MON01|
 |Parigi (PAR01)|LON02|
-|San Jose (SJC01, SJC03)|SJC03 and DAL06|
-|Sao Paulo (SAO01)|SAO01 and DAL09|
-|Singapore (SNG01)|TOK02 and SYD01|
-|Seattle (SEA01)|SJC03 and DAL06|
+|San Jose (SJC01, SJC03)|SJC03 e DAL06|
+|Sao Paulo (SAO01)|SAO01 e DAL09|
+|Singapore (SNG01)|TOK02 e SYD01|
+|Seattle (SEA01)|SJC03 e DAL06|
 |Sydney (SYD01, SYD04)|SYD01|
+|Tokyo (TOK02, TOK04, TOK05)|TOK02 e SYD01|
 |Toronto (TOR01)|TOR01|
 |Washington DC (WDC01, WDC04, WDC06, WDC07)|MON01|
 |Qualsiasi altro DC non elencato precedentemente|DAL09|

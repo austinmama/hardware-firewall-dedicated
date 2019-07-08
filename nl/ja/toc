@@ -1,7 +1,7 @@
 {:navgroup: .navgroup}
 {:topicgroup: .topicgroup}
 
-{: .toc subcollection="hardware-firewall-dedicated" audience="network" arm="3662775" href="/docs/infrastructure/hardware-firewall-dedicated?topic=infrastructure/hardware-firewall-dedicated-getting-started-with-hardware-firewall-dedicated" path="infrastructure/hardware-firewall-dedicated"}
+{: .toc subcollection="hardware-firewall-dedicated" category="security" audience="network" arm="3662775" href="/docs/infrastructure/hardware-firewall-dedicated?topic=infrastructure/hardware-firewall-dedicated-getting-started-with-hardware-firewall-dedicated" path="infrastructure/hardware-firewall-dedicated"}
 ハードウェア・ファイアウォール (専用)
 
     {: .navgroup id="learn"}

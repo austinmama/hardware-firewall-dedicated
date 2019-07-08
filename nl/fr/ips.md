@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2018, 2019
+lastupdated: "2019-04-03"
+
+keywords: ip, range, firewall, network, traffic, security
+
+subcollection: hardware-firewall-dedicated
 
 ---
 
@@ -13,6 +17,8 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # Plages d'adresses IP IBM Cloud
 {: #ibm-cloud-ip-ranges}
@@ -78,16 +84,16 @@ Une question qui revient souvent est **Quelles plages d'adresses IP autoriser vi
 |wdc06|Washington D.C.|-|USA|169.60.118.0/23|
 |wdc07|Washington D.C.|-|USA|169.61.118.0/23|
 
-Ports à autoriser :<br>
-Tous les ports TCP/UDP<br>
-ICMP – ping (pour la surveillance et le traitement des incidents du support)
+Ports à autoriser :
+Tous les ports TCP/UDP
+ICMP – ping (pour le traitement des incidents et la surveillance de support)
 
 ## Adresses IP de l'équilibreur de charge
 
 |Centre de données|Ville|Etat|Pays|Plage d'adresses IP|
 |---|---|---|---|---|
 |ams01|Amsterdam|-|NLD|159.253.157.0/24|
-|ams03|Amsterdam|-|NLD|159.8.197.0./24|
+|ams03|Amsterdam|-|NLD|159.8.197.0/24|
 |che01|Chennai|-|IND|169.38.117.0/24|
 |dal01|Dallas|Texas|USA|67.228.66.0/24, 75.126.76.0/24, 174.35.17.0/24, 208.43.15.0/24|
 |dal05|Dallas|Texas|USA|50.23.203.0/24, 108.168.157.0/24 173.192.117.0/24, 192.155.205.0/24|
@@ -157,25 +163,26 @@ ICMP – ping (pour la surveillance et le traitement des incidents du support)
 |TOR|Toronto|-|CAN|158.85.116.0/24|
 |WDC|Washington D.C.|-|USA|50.22.255.0/24|
 
-Ports à autoriser : <br>
-Tous les ports TCP/UDP
+Ports à autoriser :
+Tous les ports TCP/UDP 
 
 ## Analyses de vulnérabilité
-Pour assurer le bon fonctionnement d'une analyse de vulnérabilité, autorisez l'accès aux adresses IP suivantes : **173.192.255.232** et **172.17.19.38**.
+Pour assurer le bon fonctionnement d'une analyse de vulnérabilité Nessus, autorisez l'accès aux adresses IP suivantes : **173.192.255.232** et **172.17.19.38**. Pour les analyses de centres de données fédéraux, autorisez les adresses **100.100.1.41** et **100.64.23.41**.
 
 ## Réseau (privé) back-end
 
-Bloc d'adresses IP : votre bloc d'adresses IP privées pour les communications de serveur à serveur (10.X.X.X/X)<br>
-Ports à autoriser :<br>
-ICMP – ping (pour le traitement des incidents du support)<br>
-Tous les ports TCP/UDP<br>
+Bloc IP : Votre bloc IP privé pour les communications de serveur à serveur (10.X.X.X/X)
+Ports à autoriser :
+ICMP – ping (pour le traitement des incidents de support)
+Tous les ports TCP/UDP 
 
 ## Réseau de service (sur réseau back-end/privé)
-Assurez-vous d'ajouter des règles pour DAL01, WDC04 et l'emplacement de votre serveur. Si votre serveur est en Europe, il vous faudra ajouter des règles autorisant le trafic en provenance de DAL01, WDC04 et AMS01.
+Veillez à ajouter des règles pour DAL01, DAL10, WDC04 et l'emplacement de votre serveur. Si votre serveur est en Europe, il vous faudra ajouter des règles autorisant le trafic en provenance de DAL01, DAL10, WDC04 et AMS01.
 
 |Centre de données|Ville|Etat|Pays|Plage d'adresses IP|
 |---|---|---|---|---|
-|Tous|-|-|-|161.26.0.0/16
+|Tous|-|-|-|166.8.0.0/14|
+|Tous|-|-|-|161.26.0.0/16|
 |ams01|Amsterdam|-|NLD|10.2.64.0/20|
 |ams03|Amsterdam|-|NLD|10.3.128.0/20|
 |che01|Chennai|-|IND|10.200.16.0/20|
@@ -224,8 +231,8 @@ Assurez-vous d'ajouter des règles pour DAL01, WDC04 et l'emplacement de votre s
 |wdc07|Washington D.C.|-|USA|10.200.176.0/20|
 
 ## Réseau VPN SSL (sur réseau back-end/privé)
-ICMP – ping (pour le traitement des incidents du support) <br>
-Tous les ports TCP/UDP (pour accès à partir de votre poste de travail local)
+ICMP – ping (pour le traitement des incidents de support)
+Tous les ports TCP/UDP (pour l'accès depuis votre poste de travail en local)
 
 ## Centres de données de réseau VPN SSL
 
@@ -355,7 +362,7 @@ Tous les ports TCP/UDP (pour accès à partir de votre poste de travail local)
 |216.40.193.0/24|
 |216.234.234.0/24|
 
-Si votre serveur utilise une licence **Red Hat Enterprise Linux (RHEL)** fournie par SoftLayer, il vous faudra également autoriser l'accès au réseau de service, autrement les mises à jour et l'octroi de licence ne fonctionneront pas correctement. Pour cela, procédez comme suit :
+Si votre serveur utilise une licence **Red Hat Enterprise Linux (RHEL)** fournie par l'infrastructure {{site.keyword.data.cloud_notm}}, il vous faudra également autoriser l'accès au réseau de service, autrement les mises à jour et l'octroi de licence ne fonctionneront pas correctement. Pour cela, procédez comme suit :
 
 |Emplacement du serveur|Autoriser l'accès au réseau de service pour ce centre de données|
 |---|---|
@@ -377,6 +384,7 @@ Si votre serveur utilise une licence **Red Hat Enterprise Linux (RHEL)** fournie
 |Singapour (SNG01)|TOK02 et SYD01|
 |Seattle (SEA01)|SJC03 et DAL06|
 |Sydney (SYD01, SYD04)|SYD01|
+|Tokyo (TOK02, TOK04, TOK05)|TOK02 et SYD01|
 |Toronto (TOR01)|TOR01|
 |Washington DC (WDC01, WDC04, WDC06, WDC07)|MON01|
 |Un centre de données non indiqué ci-dessus|DAL09|

@@ -4,6 +4,10 @@ copyright:
   years: 2017
 lastupdated: "2018-11-30"
 
+keywords: about, vlan, overview, features
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -12,6 +16,8 @@ lastupdated: "2018-11-30"
 {:pre: .pre}
 {:screen: .screen}
 {:tip: .tip}
+{:note: .note}
+{:important: .important}
 {:download: .download}
 
 # Acerca del cortafuegos de hardware (dedicado)
@@ -19,13 +25,14 @@ lastupdated: "2018-11-30"
 
 Un cortafuegos de hardware (dedicado) es un dispositivo de red dedicado de un solo arrendatario que está conectado en sentido ascendente desde un servidor y protege todos los servidores de una VLAN pública. Se adquiere por separado del servidor, y se puede añadir a una VLAN en cualquier momento.   
 
-Con el cortafuegos de hardware (dedicado), tiene acceso a características avanzadas y la capacidad de ajustar el dispositivo en un grado mucho mayor que otros productos. El cortafuegos bloquea o configura el tráfico antes de que llegue al servidor. Las ventajas principales son que el servidor sólo tiene que manejar el tráfico 'bueno' y que el ancho de banda se puede limitar a las comunicaciones menos críticas. 
+Con el cortafuegos de hardware (dedicado), tiene acceso a características avanzadas y la capacidad de ajustar el dispositivo en un grado mucho mayor que otros productos. El cortafuegos bloquea o configura el tráfico antes de que llegue al servidor. Las ventajas principales son que el servidor sólo tiene que manejar el tráfico 'bueno' y que el ancho de banda se puede limitar a las comunicaciones menos críticas.
 
 Los clientes pueden gestionar el cortafuegos a través del Portal de clientes. También se puede pedir alta disponibilidad, que proporciona dos dispositivos en despliegue activo-pasivo con configuraciones sincronizadas.
 
 Puesto que el ancho de banda mensual del servidor se registra en el puerto de conmutador del servidor, el tráfico bloqueado por el cortafuegos de hardware (dedicado) no cuenta para la asignación mensual, y así no es necesario pagar por el tráfico no deseado.
 
 ## Visión general y características
+{: #overview-and-features}
 
 **Uso previsto:** protección de VLAN pública única
 

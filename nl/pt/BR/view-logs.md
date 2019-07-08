@@ -4,6 +4,10 @@ copyright:
   years: 2017
 lastupdated: "2018-11-30"
 
+keywords: logs, logging, troubleshooting, firewall
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,11 +17,13 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # Visualizando relatórios de log
 {: #viewing-log-reports}
 
-Os logs ficam disponíveis com base no IP navegando para o dispositivo protegido, selecionando a guia **Firewall** e selecionando **Ações > Logs do firewall**. 
+Os logs ficam disponíveis com base no IP navegando para o dispositivo protegido, selecionando a guia **Firewall** e selecionando **Ações > Logs do firewall**.
 
 Os logs são apresentados no formato .CSV e contêm o seguinte:
 

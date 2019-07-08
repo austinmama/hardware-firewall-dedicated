@@ -4,6 +4,10 @@ copyright:
   years: 2017,2018
 lastupdated: "2018-11-30"
 
+keywords: help, support, troubleshooting
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,8 +17,10 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
-# Hardware Firewall (Dedicated)에 대한 도움말 및 지원 받기
+# Hardware Firewall (Dedicated)에 대한 도움 및 지원 받기
 {: #getting-help-and-support-for-hardware-firewall-dedicated-}
 
 Hardware Firewall (Dedicated)를 사용하는 중에 문제가 발생하거나 질문이 있는 경우 정보를 검색하거나 아래 나열된 포럼 중 하나에서 질문을 게시하여 도움을 받을 수 있습니다. 또한 지원 티켓을 열 수도 있습니다.

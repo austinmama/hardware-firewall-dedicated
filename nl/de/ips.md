@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2018, 2019
+lastupdated: "2019-04-03"
+
+keywords: ip, range, firewall, network, traffic, security
+
+subcollection: hardware-firewall-dedicated
 
 ---
 
@@ -13,6 +17,8 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # IP-Bereiche von IBM Cloud
 {: #ibm-cloud-ip-ranges}
@@ -78,16 +84,16 @@ Eine häufig gestellte Frage ist **Welche IP-Bereiche sind für die Firewall zul
 |wdc06|Washington D.C.|-|USA|169.60.118.0/23|
 |wdc07|Washington D.C.|-|USA|169.61.118.0/23|
 
-Zulässige Ports:<br>
-Alle TCP/UDP-Ports<br>
-ICMP - Ping (zur Unterstützung der Fehlerbehebung und Überwachung)
+Zulässige Ports:
+Alle TCP/UDP-Ports
+ICMP – Ping (zur Unterstützung der Fehlerbehebung und Überwachung)
 
 ## IPs der Einrichtungen für den Lastausgleich
 
 |Rechenzentrum|Stadt|Staat|Land|IP-Bereich|
 |---|---|---|---|---|
 |ams01|Amsterdam|-|NLD|159.253.157.0/24|
-|ams03|Amsterdam|-|NLD|159.8.197.0./24|
+|ams03|Amsterdam|-|NLD|159.8.197.0/24|
 |che01|Chennai|-|IND|169.38.117.0/24|
 |dal01|Dallas|Texas|USA|67.228.66.0/24, 75.126.76.0/24, 174.35.17.0/24, 208.43.15.0/24|
 |dal05|Dallas|Texas|USA|50.23.203.0/24, 108.168.157.0/24 173.192.117.0/24, 192.155.205.0/24|
@@ -157,25 +163,26 @@ ICMP - Ping (zur Unterstützung der Fehlerbehebung und Überwachung)
 |TOR|Toronto|-|CAN|158.85.116.0/24|
 |WDC|Washington D.C.|-|USA|50.22.255.0/24|
 
-Zulässige Ports: <br>
+Zulässige Ports:
 Alle TCP/UDP-Ports
 
 ## Scan auf Sicherheitslücken
-Um den erfolgreichen Abschluss eines Scans auf Sicherheitslücken sicherzustellen, lassen Sie den Zugriff auf folgende IP-Adressen zu: **173.192.255.232** und **172.17.19.38**.
+Um den erfolgreichen Abschluss eines Nessus-Scans auf Sicherheitslücken sicherzustellen, lassen Sie den Zugriff auf folgende IP-Adressen zu: **173.192.255.232** und **172.17.19.38**. Für Scans in US-Regierungsrechenzentren **100.100.1.41** und **100.64.23.41** zulassen.
 
 ## Back-End-Netz (privat)
 
-IP-Block: Ihr privater IP-Block für die Übertragung zwischen Servern (10.X.X.X/X)<br>
-Zulässige Ports:<br>
-ICMP - Ping (zur Unterstützung der Fehlerbehebung)<br>
-Alle TCP/UDP-Ports<br>
+IP-Block: Ihr privater IP-Block für die Übertragung zwischen Servern (10.X.X.X/X)
+Zulässige Ports:
+ICMP – Ping (zur Unterstützung der Fehlerbehebung und Überwachung)
+Alle TCP/UDP-Ports
 
 ## Servicenetz (im Back-End-Netz/privatem Netz)
-Stellen Sie sicher, dass Sie die Regeln für DAL01, WDC04 und den Standort Ihres Servers hinzuzufügen. Wenn sich Ihr Server an einem EU-Standort befindet, müssen Sie Regeln hinzufügen, um den Datenverkehr von DAL01, WDC04 und AMS01 zuzulassen.
+Stellen Sie sicher, dass Regeln für DAL01, DAL10, WDC04 und der Standort Ihres Servers hinzugefügt werden. Wenn sich Ihr Server an einem EU-Standort befindet, müssen Sie Regeln hinzufügen, die den Datenverkehr von DAL01, DAL10, WDC04 und AMS01 zulassen.
 
 |Rechenzentrum|Stadt|Staat|Land|IP-Bereich|
 |---|---|---|---|---|
-|Alle|-|-|-|161.26.0.0/16
+|Alle|-|-|-|166.8.0.0/14|
+|Alle|-|-|-|161.26.0.0/16|
 |ams01|Amsterdam|-|NLD|10.2.64.0/20|
 |ams03|Amsterdam|-|NLD|10.3.128.0/20|
 |che01|Chennai|-|IND|10.200.16.0/20|
@@ -224,7 +231,7 @@ Stellen Sie sicher, dass Sie die Regeln für DAL01, WDC04 und den Standort Ihres
 |wdc07|Washington D.C.|-|USA|10.200.176.0/20|
 
 ## SSL-VPN-Netz (im Back-End-Netz/privatem Netz)
-ICMP - Ping (zur Unterstützung der Fehlerbehebung) <br>
+ICMP – Ping (zur Unterstützung der Fehlerbehebung)
 Alle TCP/UDP-Ports (für den Zugriff von Ihrer lokalen Workstation)
 
 ## SSL-VPN-Rechenzentren
@@ -355,7 +362,7 @@ Alle TCP/UDP-Ports (für den Zugriff von Ihrer lokalen Workstation)
 |216.40.193.0/24|
 |216.234.234.0/24|
 
-Wenn Ihr Server die von SoftLayer zur Verfügung gestellte **Red Hat Enterprise Linux (RHEL)**-Lizenz verwendet, müssen Sie zusätzlich den Zugriff auf das Servicenetz wie folgt zulassen, da sonst Updates und die Lizenzierung nicht richtig funktionieren:
+Wenn Ihr Server die von der {{site.keyword.data.cloud_notm}}-Infrastruktur zur Verfügung gestellte **Red Hat Enterprise Linux (RHEL)**-Lizenz verwendet, müssen Sie zusätzlich den Zugriff auf das Servicenetz wie folgt zulassen, da sonst Updates und die Lizenzierung nicht korrekt funktionieren:
 
 |Serverposition|Servicenetz für dieses Rechenzentrum zulassen|
 |---|---|
@@ -377,6 +384,7 @@ Wenn Ihr Server die von SoftLayer zur Verfügung gestellte **Red Hat Enterprise 
 |Singapore (SNG01)|TOK02 und SYD01|
 |Seattle (SEA01)|SJC03 und DAL06|
 |Sydney (SYD01, SYD04)|SYD01|
+|Tokio (TOK02, TOK04, TOK05)|TOK02 und SYD01|
 |Toronto (TOR01)|TOR01|
 |Washington DC (WDC01, WDC04, WDC06, WDC07)|MON01|
 |Nicht oben aufgeführte Bezirke (DC)|DAL09|

@@ -1,8 +1,12 @@
 ---
 
 copyright:
-  years: 2017, 2018
-lastupdated: "2018-11-30"
+  years: 2017, 2018, 2019
+lastupdated: "2019-04-03"
+
+keywords: ip, range, firewall, network, traffic, security
+
+subcollection: hardware-firewall-dedicated
 
 ---
 
@@ -13,6 +17,8 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # Rangos de IP de IBM Cloud
 {: #ibm-cloud-ip-ranges}
@@ -78,8 +84,8 @@ Una pregunta frecuente es **¿Qué rangos de IP puedo permitir a través del cor
 |wdc06|Washington D.C.|-|USA|169.60.118.0/23|
 |wdc07|Washington D.C.|-|USA|169.61.118.0/23|
 
-Puertos en los que se permite:<br>
-Todos los puertos TCP/UDP<br>
+Puertos en los que se permite:
+Todos los puertos TCP/UDP
 ICMP – ping (para supervisión y resolución de problemas de soporte)
 
 ## IP de equilibrador de carga
@@ -87,7 +93,7 @@ ICMP – ping (para supervisión y resolución de problemas de soporte)
 |Centro de datos|Ciudad|Estado|País|Rango de IP|
 |---|---|---|---|---|
 |ams01|Ámsterdam|-|NLD|159.253.157.0/24|
-|ams03|Ámsterdam|-|NLD|159.8.197.0./24|
+|ams03|Ámsterdam|-|NLD|159.8.197.0/24|
 |che01|Chennai|-|IND|169.38.117.0/24|
 |dal01|Dallas|Texas|USA|67.228.66.0/24, 75.126.76.0/24, 174.35.17.0/24, 208.43.15.0/24|
 |dal05|Dallas|Texas|USA|50.23.203.0/24, 108.168.157.0/24 173.192.117.0/24, 192.155.205.0/24|
@@ -157,25 +163,26 @@ ICMP – ping (para supervisión y resolución de problemas de soporte)
 |TOR|Toronto|-|CAN|158.85.116.0/24|
 |WDC|Washington D.C.|-|USA|50.22.255.0/24|
 
-Puertos en los que se permite: <br>
+Puertos en los que se permite:
 Todos los puertos TCP/UDP
 
 ## Exploraciones de vulnerabilidad
-Para garantizar que la exploración de vulnerabilidades se realice correctamente, permita el acceso a la dirección IP siguiente: **173.192.255.232** y **172.17.19.38**.
+Para garantizar que la exploración de vulnerabilidades de Nessus se realice correctamente, permita el acceso a la dirección IP siguiente: **173.192.255.232** y **172.17.19.38**. Para las exploraciones en centros de datos federales, permita **100.100.1.41** y **100.64.23.41**.
 
 ## Red (privada) de fondo
 
-Bloque de IP: el bloque de IP privado para las comunicaciones de servidor a servidor (10.X.X.X/X)<br>
-Puertos en los que se permite:<br>
-ICMP – ping (para resolución de problemas de soporte)<br>
-Todos los puertos TCP/UDP<br>
+Bloque de IP: el bloque de IP privado para las comunicaciones de servidor a servidor (10.X.X.X/X)
+Puertos en los que se permite:
+ICMP – ping (para resolución de problemas de soporte)
+Todos los puertos TCP/UDP
 
 ## Red de servicio (en red de fondo/privada)
-Añada reglas para DAL01, WDC04 y la ubicación del servidor. Si el servidor está en una ubicación de la UE, deberá añadir reglas que permitan el tráfico desde DAL01, WDC04 y AMS01.
+Añada reglas para DAL01, DAL10, WDC04 y la ubicación del servidor. Si el servidor está en una ubicación de la UE, deberá añadir reglas que permitan el tráfico desde DAL01, DAL10, WDC04 y AMS01.
 
 |Centro de datos|Ciudad|Estado|País|Rango de IP|
 |---|---|---|---|---|
-|Todos|-|-|-|161.26.0.0/16
+|Todos|-|-|-|166.8.0.0/14|
+|Todos|-|-|-|161.26.0.0/16|
 |ams01|Ámsterdam|-|NLD|10.2.64.0/20|
 |ams03|Ámsterdam|-|NLD|10.3.128.0/20|
 |che01|Chennai|-|IND|10.200.16.0/20|
@@ -224,7 +231,7 @@ Añada reglas para DAL01, WDC04 y la ubicación del servidor. Si el servidor est
 |wdc07|Washington D.C.|-|USA|10.200.176.0/20|
 
 ## Red VPN con SSL (en red de fondo/privada)
-ICMP – ping (para resolución de problemas de soporte) <br>
+ICMP – ping (para resolución de problemas de soporte)
 Todos los puertos TCP/UDP (para acceder desde la estación de trabajo local)
 
 ## Centros de datos de VPN con SSL
@@ -355,7 +362,7 @@ Todos los puertos TCP/UDP (para acceder desde la estación de trabajo local)
 |216.40.193.0/24|
 |216.234.234.0/24|
 
-Si el servidor utiliza una licencia de **Red Hat Enterprise Linux (RHEL)** proporcionada por SoftLayer, también se deberá permitir el acceso a la red de servicio de la siguiente manera, de lo contrario, las actualizaciones y las licencias no funcionarán correctamente:
+Si el servidor utiliza una licencia de **Red Hat Enterprise Linux (RHEL)** proporcionada por la infraestructura de {{site.keyword.data.cloud_notm}}, también se deberá permitir el acceso a la red de servicio de la siguiente manera, de lo contrario, las actualizaciones y las licencias no funcionarán correctamente:
 
 |Ubicación de servidor|Permitir red de servicio para este centro de datos|
 |---|---|
@@ -377,6 +384,7 @@ Si el servidor utiliza una licencia de **Red Hat Enterprise Linux (RHEL)** propo
 |Singapur (SNG01)|TOK02 y SYD01|
 |Seattle (SEA01)|SJC03 y DAL06|
 |Sídney (SYD01, SYD04)|SYD01|
+|Tokio (TOK02, TOK04, TOK05)|TOK02 y SYD01|
 |Toronto (TOR01)|TOR01|
 |Washington DC (WDC01, WDC04, WDC06, WDC07)|MON01|
 |Cualquier centro de datos no listado más arriba|DAL09|

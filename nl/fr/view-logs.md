@@ -4,6 +4,10 @@ copyright:
   years: 2017
 lastupdated: "2018-11-30"
 
+keywords: logs, logging, troubleshooting, firewall
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,11 +17,13 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # Affichage des rapports de journaux
 {: #viewing-log-reports}
 
-Les journaux sont disponibles par adresse IP en accédant à l'unité protégée, en sélectionnant l'onglet **Pare-feu**, puis en cliquant sur **Actions > Journaux pare-feu**. 
+Les journaux sont disponibles par adresse IP en accédant à l'unité protégée, en sélectionnant l'onglet **Pare-feu**, puis en cliquant sur **Actions > Journaux pare-feu**.
 
 Les journaux sont présentés au format .CSV et contiennent les éléments suivants :
 

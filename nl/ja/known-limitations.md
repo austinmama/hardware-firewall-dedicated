@@ -4,6 +4,10 @@ copyright:
   years: 2017
 lastupdated: "2018-11-30"
 
+keywords: limitations, problems, troubleshooting, nlb, arp, ha, failover, vlan, gateway
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,6 +17,8 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # ハードウェア・ファイアウォール (専用) の既知の制限
 {: #known-limitations-for-hardware-firewall-dedicated-}

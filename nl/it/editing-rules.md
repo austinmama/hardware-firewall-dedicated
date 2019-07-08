@@ -4,6 +4,10 @@ copyright:
   years: 2017,2018
 lastupdated: "2018-11-30"
 
+keywords: edit, rules, firewall
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,6 +17,8 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # Configurazione di Hardware Firewall (Dedicated)
 {: #configuring-the-hardware-firewall-dedicated-}
@@ -20,11 +26,12 @@ lastupdated: "2018-11-30"
 Quando il firewall viene aggiunto per la prima volta alla VLAN, viene inizialmente messa in uso una serie di regole che consente tutto il traffico. La configurazione del firewall è semplice così come la creazione di una serie di regole per consentire l'accesso ad alcuni indirizzi IP/porte da indirizzi internet specifici mentre si nega il traffico da altre origini.
 
 ## Modifica le regole
+{: edit-rules}
 
 Per modificare le regole del firewall:
 
 1. Dal tuo browser, apri [Customer Portal ![Icona link esterno](../../icons/launch-glyph.svg "Icona link esterno")](https://control.softlayer.com/){: new_window} e accedi al tuo account.
-2. Nella navigazione del portale del cliente, seleziona **Network > IP Management > VLANs**. Ogni riga rappresenta una VLAN nella tua infrastruttura.  Fai clic sul link Firewall-vlanXXXX.networklayer.com associato alla VLAN che vuoi gestire per passare alla pagina **Device Details**. Se le regole sono presenti, assicurati che "Status" indichi che per il firewall sia specificato "Processing All Rules."  Gli utenti possono scegliere di escludere le regole nel caso in cui le regole implementate abbiano un impatto non desiderato sul proprio ambiente facendo clic su "Bypass Rules" in questa area.
+2. Nella navigazione del portale del cliente, seleziona **Network > IP Management > VLANs**. Ogni riga rappresenta una VLAN nella tua infrastruttura.  Fai clic sul link Firewall-vlanXXXX.networklayer.com associato alla VLAN che vuoi gestire per passare alla pagina **Device Details**. In "Configuration->Status", puoi vedere "Routing THROUGH firewall". Se esistono una o più regole, "Status" indica che il firewall è "Processing All Rules."  Gli utenti possono scegliere di escludere le regole nel caso in cui le regole implementate abbiano un impatto non desiderato sul proprio ambiente facendo clic su "Bypass Rules" in questa area.
 3. Per iniziare ad aggiornare le regole, fai clic sulla scheda **Rules**. La pagina visualizzerà le sezioni che indicano le regole correnti in vigore per gli indirizzi IPv4 e IPv6.  Se non viene implementata alcuna regola, verrà visualizzato un segnaposto sbiadito.  Modifica le regole individuali facendo clic sulla riga corrispondente.  Questo elenco di regole è noto come 'working config'. Un 'working config' è una serie di regole che sono in fase di creazione ma che non sono ancora state applicate al firewall. Un utente può modificare, aggiungere ed eliminare le regole finché non viene completata la serie di regole.  Le regole sono visualizzate nell'ordine in cui vengono elaborate, con le regole con numeri più piccoli che hanno la precedenza su quelle con numeri più grandi (se la regola 1 consente l'attraversamento di un pacchetto, le regole da 2 in poi vengono ignorate dal pacchetto).
 4. Fai clic su una regola per modificarla o sul segno più alla fine della tabella per aggiungere una ulteriore regola. Facendo clic sull'icona meno si eliminerà la regola. Le regole sono automaticamente convalidate come le inserisci.
 
@@ -45,8 +52,8 @@ Per modificare le regole del firewall:
     **Protocol:** seleziona il protocollo a cui sarà applicata la regola (TCP/GRE/ICMP/UDP/PPTP/AH/ESP)
 
     **Notes:** campo per inserire qualsiasi nota riguardante questa regola.
-    
-5. Dopo aver completato il 'working config', premi il pulsante **Update Rules** in modo che 'working config' venga applicato al firewall. Le regole dovrebbero avere effetto in due minuti.
+
+5. Dopo aver completato il 'working config', premi il pulsante **Update Rules** in modo che 'working config' venga applicato al firewall. Le regole dovrebbero avere effetto in due minuti. Se elimini tutte le regole o nessuna regola è valida quando fai clic sul pulsante **Update Rules**, vedrai un errore che indica che è necessaria almeno una regola valida per creare una richiesta di aggiornamento del firewall (At least one valid rule is required to create a firewall update request). Se vuoi che nessuna regola si applichi al tuo firewall, usa il pulsante **Bypass Rules** nella pagina Configuration.
 
 ## Porte comuni
 

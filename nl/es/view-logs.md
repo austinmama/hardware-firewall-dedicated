@@ -4,6 +4,10 @@ copyright:
   years: 2017
 lastupdated: "2018-11-30"
 
+keywords: logs, logging, troubleshooting, firewall
+
+subcollection: hardware-firewall-dedicated
+
 ---
 
 {:shortdesc: .shortdesc}
@@ -13,11 +17,13 @@ lastupdated: "2018-11-30"
 {:screen: .screen}
 {:tip: .tip}
 {:download: .download}
+{:note: .note}
+{:important: .important}
 
 # Ver informes de registro
 {: #viewing-log-reports}
 
-Los registros están disponibles por cada IP navegando al dispositivo protegido, seleccionando el separador **Cortafuegos** y pulsando **Acciones > Registros de cortafuegos**. 
+Los registros están disponibles por cada IP navegando al dispositivo protegido, seleccionando el separador **Cortafuegos** y pulsando **Acciones > Registros de cortafuegos**.
 
 Los registros se presentan en formato .CSV y contienen lo siguiente:
 

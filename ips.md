@@ -278,6 +278,7 @@ All TCP/UDP ports (for access from your local workstation)
 |tor01|Toronto|-|CAN|10.1.232.0/24|
 |wdc01|Washington D.C.|-|USA|10.1.16.0/23|
 |wdc04|Washington D.C.|-|USA|10.3.212.0/24|
+|wdc03|Washington D.C.|-|USA|100.101.132.0/24|
 |wdc06|Washington D.C.|-|USA|10.200.208.0/24|
 |wdc07|Washington D.C.|-|USA|10.200.204.0/24|
 
@@ -303,6 +304,7 @@ All TCP/UDP ports (for access from your local workstation)
 |dal05|Dallas|Texas|USA|10.1.27.0/24|
 |dal06|Dallas|Texas|USA|10.2.211.0/24|
 |dal07|Dallas|Texas|USA|10.1.238.0/24|
+|dal08|Dallas|Texas|USA|100.101.128.0/24|
 |dal09|Dallas|Texas|USA|10.2.233.0/24|
 |dal10|Dallas|Texas|USA|10.200.229.0/24|
 |dal12|Dallas|Texas|USA|10.200.217.0/24|

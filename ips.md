@@ -368,25 +368,26 @@ If your server uses a **Red Hat Enterprise Linux (RHEL)** license provided by {{
 
 |Server Location|Allow Service Network for this datacenter|
 |---|---|
-|Amsterdam (AMS01, AMS03)|LON02|
-|Chennai (CHE01)|TOK02 and SYD01|
-|Dallas (DAL01, DAL05, DAL07, DAL09)|DAL09|
-|Dallas (DAL06, DAL10)|DAL06|
+|Amsterdam (AMS01, AMS03)|FRA02|
+|Chennai (CHE01)|TOK02|
+|Dallas (DAL01, DAL05, DAL06, DAL07, DAL09, DAL10, DAL12, DAL13)|DAL09|
 |Houston (HOU02)|DAL09|
-|Frankfurt (FRA02)|LON02|
-|Hong Kong (HKG02)|TOK02 and SYD01|
-|London (LON02)|LON02|
+|Frankfurt (FRA02, FRA04, FRA05)|FRA02|
+|Hong Kong (HKG02)|TOK02|
+|London (LON02, LON04, LON05, LON06)|LON02|
 |Melbourne (MEL01)|SYD01|
-|Mexico (MEX01)|DAL06|
-|Milan (MIL01)|LON02|
+|Mexico (MEX01)|DAL09|
+|Milan (MIL01)|FRA02|
 |Montreal (MON01)|MON01|
-|Paris (PAR01)|LON02|
-|San Jose (SJC01, SJC03)|SJC03 and DAL06|
-|Sao Paulo (SAO01)|SAO01 and DAL09|
-|Singapore (SNG01)|TOK02 and SYD01|
-|Seattle (SEA01)|SJC03 and DAL06|
-|Sydney (SYD01, SYD04)|SYD01|
+|Oslo (OSL01)|FRA02|
+|Paris (PAR01)|FRA02|
+|San Jose (SJC01, SJC03, SJC04)|DAL09|
+|Sao Paulo (SAO01)|DAL09|
+|Seoul (SEO01)|TOK02|
+|Singapore (SNG01)|SYD01|
+|Seattle (SEA01)|DAL09|
+|Sydney (SYD01, SYD04, SYD05)|SYD01|
 |Tokyo (TOK02, TOK04, TOK05)|TOK02 and SYD01|
-|Toronto (TOR01)|TOR01|
+|Toronto (TOR01)|MON01|
 |Washington DC (WDC01, WDC04, WDC06, WDC07)|MON01|
 |Any DC Not Listed Above|DAL09|

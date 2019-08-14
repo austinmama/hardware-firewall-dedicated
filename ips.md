@@ -364,9 +364,11 @@ All TCP/UDP ports (for access from your local workstation)
 |216.40.193.0/24|
 |216.234.234.0/24|
 
+## Red Hat Enterprise Linux Server Requirements
+
 If your server uses a **Red Hat Enterprise Linux (RHEL)** license provided by {{site.data.keyword.cloud_notm}} Infrastructure, you will additionally need to allow access to the service network as follows, otherwise updates and licensing will not function properly:
 
-|Server Location|Allow Service Network for this datacenter|
+|Server Location|Allow Private Service Network for this datacenter|
 |---|---|
 |Amsterdam (AMS01, AMS03)|FRA02|
 |Chennai (CHE01)|TOK02|
@@ -387,7 +389,7 @@ If your server uses a **Red Hat Enterprise Linux (RHEL)** license provided by {{
 |Singapore (SNG01)|SYD01|
 |Seattle (SEA01)|DAL09|
 |Sydney (SYD01, SYD04, SYD05)|SYD01|
-|Tokyo (TOK02, TOK04, TOK05)|TOK02 and SYD01|
+|Tokyo (TOK02, TOK04, TOK05)|TOK02|
 |Toronto (TOR01)|MON01|
 |Washington DC (WDC01, WDC04, WDC06, WDC07)|MON01|
 |Any DC Not Listed Above|DAL09|

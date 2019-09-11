@@ -55,7 +55,7 @@ A frequently asked question is **What IP ranges do I allow through the firewall?
 |hkg02|Hong Kong|-|CHN|119.81.138.0/23|
 |hou02|Houston|Texas|USA|173.193.118.0/23|
 |lon02|London|-|ENG|5.10.118.0/23|
-|lon04|London|-|ENG|169.62.118.0/24|
+|lon04|London|-|ENG|158.175.127.0/24|
 |lon05|London|-|ENG|141.125.118.0/23|
 |lon06|London|-|ENG|158.176.118.0/23|
 |mel01|Melbourne|-|AUS|168.1.118.0/23|
@@ -231,7 +231,7 @@ Be sure to configure rules and verify routes for DAL01, DAL10, WDC04, and the lo
 |wdc07|Washington D.C.|-|USA|10.200.176.0/20|
 
 ## SSL VPN network (on backend/private network)
-ICMP – ping (for support troubleshooting) 
+ICMP – ping (for support troubleshooting)
 All TCP/UDP ports (for access from your local workstation)
 
 ## SSL VPN Datacenters

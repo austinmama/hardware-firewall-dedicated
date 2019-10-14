@@ -187,7 +187,7 @@ Be sure to configure rules and verify routes for DAL01, DAL10, WDC04, and the lo
 |ams03|Amsterdam|-|NLD|10.3.128.0/20|
 |che01|Chennai|-|IND|10.200.16.0/20|
 |dal01|Dallas|Texas|USA|10.0.64.0/19|
-|dal05|Dallas|Texas|USA|10.1.128.0/19|
+|dal05|Dallas|Texas|USA|10.1.128.0/19 * | 
 |dal06|Dallas|Texas|USA|10.2.128.0/20|
 |dal07|Dallas|Texas|USA|10.1.176.0/20|
 |dal08|Dallas|Texas|USA|100.100.0.0/20|
@@ -229,6 +229,9 @@ Be sure to configure rules and verify routes for DAL01, DAL10, WDC04, and the lo
 |wdc04|Washington D.C.|-|USA|10.3.160.0/20 and 10.201.0.0/20|
 |wdc06|Washington D.C.|-|USA|10.200.160.0/20|
 |wdc07|Washington D.C.|-|USA|10.200.176.0/20|
+
+`*` - The 10.1.129.0/24 subnet, within the 10.1.128.0/19 master subnet, is used for Global service virtual IPs, which are not located in dal05.
+{: note}
 
 ## SSL VPN network (on backend/private network)
 ICMP – ping (for support troubleshooting)

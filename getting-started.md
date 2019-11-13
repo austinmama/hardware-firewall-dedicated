@@ -2,9 +2,9 @@
 
 copyright:
   years: 2017
-lastupdated: "2019-08-28"
+lastupdated: "2019-11-13"
 
-keywords: order, firewall
+keywords: order, firewall, dedicated, hardware
 
 subcollection: hardware-firewall-dedicated
 
@@ -24,6 +24,7 @@ subcollection: hardware-firewall-dedicated
 {: #getting-started}
 
 The Hardware Firewall (Dedicated) provides customers with an essential layer of security that is provisioned on demand without service interruptions. It prevents unwanted traffic from hitting your servers, reducing your attack surface, and allowing your server resources to be dedicated for their intended use.  
+{: shortdesc}
 
 To order a Hardware Firewall (Dedicated), perform the following procedure:
 

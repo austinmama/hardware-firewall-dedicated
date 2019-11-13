@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018
-lastupdated: "2018-11-30"
+lastupdated: "2019-11-13"
 
 keywords: cancel, firewall
 
@@ -23,7 +23,8 @@ subcollection: hardware-firewall-dedicated
 # Canceling a Hardware Firewall (Dedicated)
 {: #canceling-a-hardware-firewall-dedicated-}
 
-Firewalls can be cancelled at any time, by performing the following procedure:
+Your Hardware Firewall (Dedicated) can be cancelled at any time, by performing the procedure here.
+{: shortdesc}
 
 1. From your browser, open the [Customer Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.softlayer.com/){: new_window} and log into your account.
 2. In the Customer Portal navigation, go to **Network > IP Management > VLANs** and click on the firewall device you want to cancel.

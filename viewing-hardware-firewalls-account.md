@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-11-30"
+lastupdated: "2019-11-13"
 
 keywords: firewall, vlan, view, portal
 
@@ -23,7 +23,8 @@ subcollection: hardware-firewall-dedicated
 # Viewing your IBM Firewalls
 {: #viewing-your-ibm-firewalls}
 
-To see which VLANs are protected with Firewalls and to find more details about individual Firewalls, go to the VLANs page:
+You can see which VLANs are protected with Firewalls and find more details about individual Firewalls by visiting the VLANs page.
+{: shortdesc}
 
 1. From your browser, open the [Customer Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.softlayer.com/){: new_window} and log into your account.
 2. In the Customer Portal navigation, select **Network > IP Management > VLANs**.

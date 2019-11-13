@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-11-30"
+lastupdated: "2019-11-13"
 
 keywords: logs, logging, troubleshooting, firewall
 
@@ -23,7 +23,8 @@ subcollection: hardware-firewall-dedicated
 # Viewing Log Reports
 {: #viewing-log-reports}
 
-Logs are available on a per-IP basis by navigating to the protected device, selecting the **Firewall** tab, and selecting **Actions > Firewall Logs**.
+Logs for your Hardware Firewall (Dedicated) are available on a per-IP basis by navigating to the protected device, selecting the **Firewall** tab, and selecting **Actions > Firewall Logs**.
+{: shortdesc}
 
 Logs are presented in .CSV format and contain the following:
 

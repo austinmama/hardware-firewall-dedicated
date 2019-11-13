@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017, 2018, 2019
-lastupdated: "2019-04-03"
+lastupdated: "2019-11-13"
 
 keywords: ip, range, firewall, network, traffic, security
 
@@ -23,7 +23,8 @@ subcollection: hardware-firewall-dedicated
 # IBM Cloud IP Ranges
 {: #ibm-cloud-ip-ranges}
 
-A frequently asked question is **What IP ranges do I allow through the firewall?**. The following list contains the full range of IPs to use with the following IBM© firewalls and appliances:
+A frequently asked question is **What IP ranges do I allow through the firewall?**. The following list contains the full range of IPs to use with the following IBM© firewalls and appliances.
+{: shortdesc}
 
 * IBM Cloud Juniper vSRX Standard
 * IBM Virtual Router Appliance
@@ -187,7 +188,7 @@ Be sure to configure rules and verify routes for DAL01, DAL10, WDC04, and the lo
 |ams03|Amsterdam|-|NLD|10.3.128.0/20|
 |che01|Chennai|-|IND|10.200.16.0/20|
 |dal01|Dallas|Texas|USA|10.0.64.0/19|
-|dal05|Dallas|Texas|USA|10.1.128.0/19 * | 
+|dal05|Dallas|Texas|USA|10.1.128.0/19 * |
 |dal06|Dallas|Texas|USA|10.2.128.0/20|
 |dal07|Dallas|Texas|USA|10.1.176.0/20|
 |dal08|Dallas|Texas|USA|100.100.0.0/20|

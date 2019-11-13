@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-11-30"
+lastupdated: "2019-11-13"
 
 keywords: bypass, firewall, rules,
 
@@ -23,7 +23,8 @@ subcollection: hardware-firewall-dedicated
 # Bypassing Hardware Firewall (Dedicated) Rules
 {: #bypassing-hardware-firewall-dedicated-rules}
 
-To bypass the firewall rules,
+You can bypass the rules of your Hardware Firewall (Dedicated) by following the instructions here.
+{: shortdesc}
 
 1. From your browser, open the [Customer Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.softlayer.com/){: new_window} and log into your account.
 2. In the Customer Portal navigation, go to **Network > IP Management > VLANs** and click on the firewall device you want to bypass.

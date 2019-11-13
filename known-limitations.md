@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-11-30"
+lastupdated: "2019-11-13"
 
 keywords: limitations, problems, troubleshooting, nlb, arp, ha, failover, vlan, gateway
 
@@ -23,7 +23,8 @@ subcollection: hardware-firewall-dedicated
 # Known Limitations for Hardware Firewall (Dedicated)
 {: #known-limitations-for-hardware-firewall-dedicated-}
 
-The Hardware Firewall (Dedicated) has the following known limitations:
+There are some limitations to be aware of when using your Hardware Firewall (Dedicated).
+{: shortdesc}
 
 * Incompatible with Windows Network Load Balancing (NLB) due to the way ARP is processed
 

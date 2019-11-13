@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017
-lastupdated: "2018-11-30"
+lastupdated: "2019-11-13"
 
 keywords: faqs, questions, firewall, gateway, traffic, server, vpn, nat
 
@@ -24,7 +24,8 @@ subcollection: hardware-firewall-dedicated
 # FAQs for Hardware Firewall (Dedicated)
 {: #faqs-for-hardware-firewall-dedicated-}
 
-The following are frequently asked questions when working with the Hardware Firewall (Dedicated).
+The following frequently asked questions can help you when working with the Hardware Firewall (Dedicated).
+{: shortdesc}
 
 ## What is a firewall?
 {: faq}

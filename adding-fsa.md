@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2018-11-30"
+lastupdated: "2019-11-13"
 
 keywords: vlan, add
 
@@ -24,6 +24,7 @@ subcollection: hardware-firewall-dedicated
 {: #adding-a-hardware-firewall-dedicated-to-a-public-vlan}
 
 A Hardware Firewall (Dedicated) cannot be ordered as part of a server order and must be placed after at least one public compute node is established and the associated VLAN has been added.
+{: shortdesc}
 
 To add protection to a VLAN, order a Hardware Firewall (Dedicated) from the VLANs page:
 
@@ -32,7 +33,7 @@ To add protection to a VLAN, order a Hardware Firewall (Dedicated) from the VLAN
 
 	To filter the VLANs table to only show public VLANs, click on the **Filter** tab, enter "fcr" in the Primary Router field and click the **Filter** button.
   {: tip}
-  
+
 3. Find the VLAN you want protected and click the **Add Firewall** link in the same row. This link opens the **Order Hardware Firewall (Dedicated)** page. If the "Gateway/Firewall" column is already populated, a Firewall or Network Gateway is already associated with the VLAN and the device must be removed before you can proceed.
 4. Select **Hardware Firewall (Dedicated)** or **Hardware Firewall (High Availability)**.
 

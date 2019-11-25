@@ -57,7 +57,7 @@ No, it is not possible to have a firewall service (standard or dedicated) and a 
 
 Coming from the public internet in, the Local Load Balancer, Dedicated Load Balancer or Enterprise Load Balancer products are first, the Hardware Firewall products are next, and the NetScaler products are last (along with the customers servers).
 
-## Does SoftLayer charge for firewall bandwidth?
+## Does IBM Cloud charge for firewall bandwidth?
 {: faq}
 
 The Hardware Firewall, Hardware Firewall (Dedicated), and Fortigate Security Appliance are not metered for bandwidth.  Additionally, these products can reduce total bandwidth utilization by limiting the traffic that servers must respond to.
@@ -65,7 +65,7 @@ The Hardware Firewall, Hardware Firewall (Dedicated), and Fortigate Security App
 ## What are the greyed out ports in my Windows Firewall?
 {: faq}
 
-SoftLayer offers many different services that you can utilize with your server including Evault, SNMP and Nagios monitoring. These services require that our internal systems communicate with your server to some degree. The grayed out ports you see in the Exceptions list are ports open on the internal network port only. They are still blocked on the public (internet) network connection. Since the internal network is a secured network having these ports open is considered secure.
+IBM Cloud offers many different services that you can utilize with your server including Evault, SNMP and Nagios monitoring. These services require that our internal systems communicate with your server to some degree. The grayed out ports you see in the Exceptions list are ports open on the internal network port only. They are still blocked on the public (internet) network connection. Since the internal network is a secured network having these ports open is considered secure.
 
 These ports generally cannot be modified however if you reset the firewall rules it will clear them from the Exceptions list. Please beware that resetting the firewall rules may have an adverse affect not only on these additional services but also could cause other issues as well with your server depending on its current configuration.
 
@@ -91,16 +91,16 @@ Not all firewalls offer VPN and not all VPN options are the same.  The general o
 
 * Each customer receives unlimited SSL VPN connections to our private network. These connections can be established by clicking the VPN link at the top of the page while logged into the IBM Cloud console.
 * Customers also receive one PPTP VPN per account. They can add additional PPTP VPN users to their account in packs of 5 for $5/month extra.
-* SoftLayer also offers a basic multi-tenant IPSec VPN service starting at $99/month.
-* The Fortigate Security Appliance provides SSL and IPSec VPN options with Public network access only (no access to the SoftLayer private network).
+* IBM Cloud also offers a basic multi-tenant IPSec VPN service starting at $99/month.
+* The Fortigate Security Appliance provides SSL and IPSec VPN options with Public network access only (no access to the IBM Cloud private network).
 * The Network Gateway provides SSL, IPSec and OpenVPN capabilities on the public or private network
 * The NetScaler products can provide SSL and IPSec VPN on the public or private network.
-* Customers can also deploy a VPN solution on to a server within their SoftLayer environment.
+* Customers can also deploy a VPN solution on to a server within their IBM Cloud environment.
 
 ## When I select the High Availability option for the Hardware Firewall (Dedicated) or the Fortigate Security Appliance, what steps do I have to take to leverage this feature?
 {: faq}
 
-None. When ordered in HA, SoftLayer automatically provisions the appliances in HA configuration.  In the event that the primary device fails, a secondary passive device will take over as the primary active instance and begin passing traffic.  While this failover is typically automatic, it is best practice to monitor servers and ensure traffic is being passed successfully.
+None. When ordered in HA, IBM Cloud automatically provisions the appliances in HA configuration.  In the event that the primary device fails, a secondary passive device will take over as the primary active instance and begin passing traffic.  While this failover is typically automatic, it is best practice to monitor servers and ensure traffic is being passed successfully.
 
 ## Which firewall products support public-to-private NAT and/or private VLAN segmentation?
 {: faq}

@@ -28,11 +28,12 @@ The Hardware Firewall (Dedicated) provides customers with an essential layer of 
 
 To order a Hardware Firewall (Dedicated), perform the following procedure:
 
-1. From your browser, open the [Customer Portal ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://control.softlayer.com/){: new_window} and log into your account.
-2. In the Customer Portal navigation, select **Network > IP Management > VLANs**.
-3. Scroll to the VLAN you want protected and click on the **Add Firewall** link in the same row. This link opens the **Order Hardware Firewall (Dedicated)** page.
-4. Select **Hardware Firewall (Dedicated)** to order one Firewall or **Hardware Firewall (High Availability)** to order two Firewalls in a high availability pair.
-5. Enter your choice of payment and click **Continue**.
-6. In the next screen, enter promo codes if applicable, read and agree to the Master Service Agreement and click on **Place Order**.
+1. From your browser, open the [IBM Cloud catalog ![External link icon](../../icons/launch-glyph.svg "External link icon")](https://cloud.ibm.com){:new_window} and log into your account.
+2. Select the Menu icon ![Menu icon](../../icons/icon_hamburger.svg) from the top left, then click **Classic Infrastructure**.
+3. Select **Network > IP Management > VLANs**.
+4. Scroll to the VLAN you want protected and click on the **Add Firewall** link in the same row. This link opens the **Order Hardware Firewall (Dedicated)** page.
+5. Select **Hardware Firewall (Dedicated)** to order one Firewall or **Hardware Firewall (High Availability)** to order two Firewalls in a high availability pair.
+6. Enter your choice of payment and click **Continue**.
+7. In the next screen, enter promo codes if applicable, read and agree to the Master Service Agreement and click on **Place Order**.
 
 After the Hardware Firewall (Dedicated) is provisioned, you can [configure it](/docs/infrastructure/hardware-firewall-dedicated?topic=hardware-firewall-dedicated-configuring-the-hardware-firewall-dedicated-).

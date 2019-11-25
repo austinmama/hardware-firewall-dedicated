@@ -89,7 +89,7 @@ Both the Dedicated Hardware Firewall and the Fortigate Security Appliance can pr
 
 Not all firewalls offer VPN and not all VPN options are the same.  The general options for VPN are:
 
-* Each customer receives unlimited SSL VPN connections to our private network. These connections can be established by clicking the VPN link at the top of the page while logged into the customer portal.
+* Each customer receives unlimited SSL VPN connections to our private network. These connections can be established by clicking the VPN link at the top of the page while logged into the IBM Cloud console.
 * Customers also receive one PPTP VPN per account. They can add additional PPTP VPN users to their account in packs of 5 for $5/month extra.
 * SoftLayer also offers a basic multi-tenant IPSec VPN service starting at $99/month.
 * The Fortigate Security Appliance provides SSL and IPSec VPN options with Public network access only (no access to the SoftLayer private network).

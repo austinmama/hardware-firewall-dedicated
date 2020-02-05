@@ -11,7 +11,7 @@ subcollection: hardware-firewall-dedicated
 ---
 
 {:shortdesc: .shortdesc}
-{:new_window: target="_blank_"}
+{:new_window: target="_blank"}
 {:codeblock: .codeblock}
 {:pre: .pre}
 {:screen: .screen}
@@ -180,238 +180,59 @@ All TCP/UDP ports
 ## Service Network (on backend/private network)
 Be sure to configure rules and verify routes for DAL01, DAL10, WDC04, and the location of your server. If your server is in an EU location, you'll need to add rules allowing traffic from DAL01, DAL10, WDC04, and AMS01 to your server. The traffic must be able to travel between the service networks and your server. By default, all servers and gateway/firewall devices are configured with a static route for the `10.0.0.0/8` network to the Backend Customer Router (BCR). If you change that configuration such that the entire `10.0.0.0/8` network is pointed elsewhere, you must also configure static routes for the service networks to ensure they are pointed to the Backend Customer Router (BCR). Failing to do so will result in the static routes being pointed to whichever IP address you replaced the original with. If you do not change the default static route for `10.0.0.0/8`, then the service networks are already routed correctly.
 
-### Service by data center
-{: #service-by-data-center}
+|Datacenter|City|State|Country|IP Range|
+|---|---|---|---|---|
+|All|-|-|-|166.8.0.0/14|
+|All|-|-|-|161.26.0.0/16|
+|ams01|Amsterdam|-|NLD|10.2.64.0/20|
+|ams03|Amsterdam|-|NLD|10.3.128.0/20|
+|che01|Chennai|-|IND|10.200.16.0/20|
+|dal01|Dallas|Texas|USA|10.0.64.0/19|
+|dal05|Dallas|Texas|USA|10.1.128.0/19 * |
+|dal06|Dallas|Texas|USA|10.2.128.0/20|
+|dal07|Dallas|Texas|USA|10.1.176.0/20|
+|dal08|Dallas|Texas|USA|100.100.0.0/20|
+|dal09|Dallas|Texas|USA|10.2.112.0/20 and 10.3.192.0/24|
+|dal10|Dallas|Texas|USA|10.200.80.0/20|
+|dal12|Dallas|Texas|USA|10.200.112.0/20|
+|dal13|Dallas|Texas|USA|10.200.128.0/20|
+|fra02|Frankfurt|-|DEU|10.3.80.0/20|
+|fra04|Frankfurt|-|DEU|10.201.112.0/20|
+|fra05|Frankfurt|-|DEU|10.201.128.0/20|
+|hkg02|Hong Kong|-|CHN|10.2.160.0/20|
+|hou02|Houston|Texas|USA|10.1.160.0/20|
+|lon02|London|-|ENG|10.1.208.0/20|
+|lon04|London|-|ENG|10.201.32.0/20|
+|lon05|London|-|ENG|10.201.48.0/20|
+|lon06|London|-|ENG|10.201.64.0/20|
+|mel01|Melbourne|-|AUS|10.2.80.0/20|
+|mex01|Mexico City|-|MEX|10.2.176.0/20|
+|mil01|Milan|-|ITA|10.3.144.0/20|
+|mon01|Montreal|-|CAN|10.3.112.0/20|
+|par01|Paris|-|FRA|10.2.144.0/20|
+|osl01|Oslo|-|NOR|10.200.96.0/20|
+|sao01|São Paulo|-|BRA|10.200.0.0/20|
+|sea01|Seattle|Washington|USA|10.1.64.0/19|
+|seo01|Seoul|-|KOR|10.200.64.0/20|
+|sjc01|San Jose|California|USA|10.1.192.0/20|
+|sjc03|San Jose|California|USA|10.3.176.0/20|
+|sjc04|San Jose|California|USA|10.201.80.0/20|
+|sng01|Jurong East|-|SGP|10.2.32.0/20|
+|syd01|Sydney|-|AUS|10.3.96.0/20|
+|syd04|Sydney|-|AUS|10.201.16.0/20|
+|syd05|Sydney|-|AUS|10.202.16.0/20|
+|tok02|Tokyo|-|JPN|10.3.64.0/20|
+|tok04|Tokyo|-|JPN|10.201.176.0/20|
+|tok05|Tokyo|-|JPN|10.201.192.0/20|
+|tor01|Toronto|-|CAN|10.2.48.0/20|
+|wdc01|Washington D.C.|-|USA|10.1.96.0/19|
+|wdc03|Washington D.C.|-|USA|100.100.32.0/20|
+|wdc04|Washington D.C.|-|USA|10.3.160.0/20 and 10.201.0.0/20|
+|wdc06|Washington D.C.|-|USA|10.200.160.0/20|
+|wdc07|Washington D.C.|-|USA|10.200.176.0/20|
 
-| Data Center | IP Range |
-|:-----|:-----|
-|**Required Flows**:<ul><li>Outbound TCP 8086 and TCP 8087 from your private VLANs<br />to IP ranges documented in DAL09 and DAL10 only.</li><li>Outbound TCP 2546 from your private VLANs to IP ranges<br />documented for each DC where you need to access your vault.</li></ul> | |
-| AMS01 | 10.2.70.0/24<br />10.200.54.0/24 |   
-| AMS03 | 10.3.134.0/24 |  
-| CHE01 | 10.200.22.0/24 |  
-| DAL01 | 10.0.82.0/24 |
-| DAL05 | 10.1.146.0/24 |     
-| DAL06 | 10.2.134.0/24 |   
-| DAL07 | 10.1.182.0/24 |  
-| DAL08 | 100.100.6.0/24 |  
-| DAL09 | 10.2.118.0/24 |
-| DAL09 | 10.2.126.0/24
-| DAL10 | 10.200.86.0/24 |  
-| DAL12 | 10.200.118.0/24 |  
-| DAL13 | 10.200.134.0/24 |  
-| FRA02 | 10.3.86.0/24 |  
-| FRA02AZ | 10.201.150.0/24 |  
-| FRA04 | 10.201.118.0/24 |  
-| FRA05 | 10.201.134.0/24 |
-| HKG02 | 10.2.166.0/24 |  
-| HOU02 | 10.1.166.0/24 |
-| LON02 | 10.1.214.0/24 |
-| LON02AZ | 10.201.102.0/24 |  
-| LON04 | 10.201.38.0/24 |  
-| LON05 | 10.201.54.0/24 |   
-| LON06 | 10.201.70.0/24 |  
-| MEL01 | 10.2.86.0/24 |  
-| MEX01 | 10.2.182.0/24 |   
-| MIL01 | 10.3.150.0/24 |  
-| MON01 | 10.3.118.02/24 |  
-| OSL01 | 10.200.102.0/24 |  
-| PAR01 | 10.2.150.0/24 |  
-| SAO01 | 10.200.6.0/24 |  
-| SEA01 | 10.1.82.0/24 |  
-| SEO01 | 10.200.86.0/24 |  
-| SJC01 | 10.1.198.0/24<br />10.200.38.0/24 |
-| SJC03 | 10.3.182.0/24 |
-| SJC04 | 10.201.86.0/24 |
-| SNG01 | 10.2.38.0/24<br />10.200.150.0/24 |  
-| SYD01 | 10.3.102.0/24 |  
-| SYD04 | 10.201.22.0/24 |  
-| TOK02AZ | 10.201.166.0/24 |  
-| TOK04 | 10.201.182.0/24 |   
-| TOK05 | 10.201.198.0/24 |
-| TOR01 | 10.2.54.0/24 |
-| WDC01 | 10.1.114.0/24 |
-| WDC03 | 100.100.38.0/24 |
-| WDC04 | 10.3.166.0/24<br />10.201.6.0/24 |
-| WDC06 | 10.200.166.0/24 |
-| WDC07 | 10.200.182.0/24 |
-{: class="simple-tab-table"}
-{: caption="Table 1. eVault by Data Center" caption-side="left"}
-{: #simpletabtable1}
-{: tab-title="eVault"}
-{: tab-group="IAM-simple"}
-
-| Data Center | IP Range |
-|:-----|:-----|
-| **Required Flows**:<ul><li>NFS File Storage:</li><ul><li>TCP & UDP 111 (sunrpc)</li><li>TCP & UDP 2049 (nfs)</li><li>TCP & UDP 111(portmapper)</li><li>TCP & UDP 635 (nfsd)</li><li>TCP & UDP 4045-4048</li><li>UDP 4049</li></ul><li>Block Storage:</li><ul><li>TCP & UDP 65200 (iscsi)</li></ul></ul> | |
-| AMS01 | 10.2.78.0/24<br />10.200.62.0/24 |
-| AMS03 | 10.3.142.0/24 |
-| CHE01 | 10.200.30.10/24 |
-| DAL01 | 10.0.90.0/24<br />10.0.95.0/24 |
-| DAL05 | 10.1.154.0/24<br />10.1.159.0/24 |
-| DAL06 | 10.2.142.0/24 |
-| DAL07 | 10.1.190.0/24 |
-| DAL08 | 100.100.14.0/24 |
-| DAL10 | 10.200.94.0/24 |
-| DAL12 | 10.200.126.0/24 |
-| DAL13 | 10.200.142.0/24 |
-| FRA02 | 10.3.94.0/24 |
-| FRA02AZ | 10.201.158.0/24 |
-| FRA04 | 10.201.110.0/24 |
-| FRA05 | 10.201.142.0/24 |
-| HKG02 | 10.2.174.0/24 |
-| HOU02 | 10.1.174.0/24 |
-| LON02 | 10.1.222.0/24 |
-| LON02AZ | 10.201.110.0/24 |
-| LON04 | 10.201.46.0/24 |
-| LON05 | 10.201.62.0/24 |
-| LON06 | 10.201.78.0/24 |
-| MEL01 | 10.2.94.0/24 |
-| MEX01 | 10.2.190.0/24 |
-| MIL01 | 10.3.158.0/24 |
-| MON01 | 10.3.126.0/24 |
-| OSL01 | 10.200.110.0/24 |
-| PAR01 | 10.2.158.0/24 |
-| SAO01 | 10.200.14.0/24 |
-| SEA01 | 10.1.90.0/24<br />10.1.95.0/24 |
-| SEO01 | 10.200.78.0/24 |
-| SJC01 | 10.1.206.0/24<br />10.200.46.0/24 |
-| SJC03 | 10.3.190.0/24 |
-| SJC04 | 10.201.94.0/24 |
-| SNG01 | 10.2.46.0/24<br />10.200.158.0/24 |
-| SYD01 | 10.3.110.0/24 |
-| SYD04 | 10.201.30.0/24 |
-| TOK02 | 10.3.78.0/24 |
-| TOK02AZ | 10.201.174.0/24 |
-| TOK04 | 10.201.190.0/24 |
-| TOK05 | 10.201.206.0/24 |
-| TOR01 | 10.2.62.0/24 |
-| WDC01 | 10.1.122.0/24<br />10.1.127.0/24<br />10.1.104.0/24 |
-| WDC03 | 100.100.46.0/24 |
-| WDC04 | 10.201.14.0/24 |
-| WDC04 | 10.3.174.0/24 |
-| WDC06 | 10.200.174.0/24 |
-| WDC07 | 10.200.90.0/24 |
-{: caption="Table 2. File &amp; Block by Data Center" caption-side="left"}
-{: #simpletabtable2}
-{: tab-title="File & Block"}
-{: tab-group="IAM-simple"}
-{: class="simple-tab-table"}
-
-| Data Center | IP Range |
-|-----|-----|
-| **Required Flows**: placeholder | |
-| AMS01 | 10.2.67.0/24 |
-| AMS03 | 10.3.131.0/24 |
-| CHE01 | 10.200.19.0/24 |
-| DAL01 | 10.0.79.0/24 |
-| DAL05 | 10.1.143/139.0/24 |
-| DAL06 | 10.2.131.0/24 |
-| DAL07 | 10.1.179.0/24 |
-| DAL08 | 100.100.3.0/24 |
-| DAL09 | 10.2.115.0/24 |
-| DAL10 | 10.200.83.0/24 |
-| DAL12 | 10.200.115.0/24 |
-| DAL13 | 10.200.131.0/24 |
-| FRA02 | 10.3.83.0/24 |
-| FRA02AZ | 10.201.147.0/24 |
-| FRA04 | 10.201.115.0/24 |
-| FRA05 | 10.201.131.0/24 |
-| HKG02 | 10.2.163.0/24 |
-| HOU02 | 10.1.163.0/24 |
-| LON02 | 10.1.211.0/24 |
-| LON02AZ | 10.201.99.0/24 |
-| LON04 | 10.201.35.0/24 |
-| LON05 | 10.201.51.0/24 |
-| LON06 | 10.201.67.0/24 |
-| MEL01 | 10.2.83.0/24 |
-| MEX01 | 10.2.179.0/24 |
-| MIL01 | 10.3.147.0/24 |
-| MON01 | 10.3.115.0/24 |
-| OSL01 | 10.200.99.0/24 |
-| PAR01 | 10.2.147.0/24 |
-| SAO01 | 10.200.3.0/24 |
-| SEA01 | 10.1.79.0/24 |
-| SEO01 | 10.200.67.0/24 |
-| SJC01 | 10.1.195.0/24 |
-| SJC03 | 10.3.179.0/24 |
-| SJC04 | 10.201.83.0/24 |
-| SNG01 | 10.2.35.0/24 |
-| SYD01 | 10.3.99.0/24 |
-| SYD04 | 10.201.19.0/24 |
-| TOK02 | 10.3.67.0/24 |
-| TOK02AZ | 10.201.163.0/24 |
-| TOK04 | 10.201.179.0/24 |
-| TOK05 | 10.201.195.0/24 |
-| TOR01 | 10.2.51.0/24 |
-| WDC01 | 10.1.111.0/24 |
-| WDC03 | 100.100.35.0/24 |
-| WDC04 | 10.3.163.0/24 |
-| WDC04 | 10.201.3.0/24 |
-| WDC06 | 10.200.163.0/24 |
-| WDC07 | 10.200.179.0/24 |
-{: caption="Table 3. AdvMon (Nimsoft) by Data Center" caption-side="left"}
-{: #simpletabtable3}
-{: tab-title="AdvMon (Nimsoft)"}
-{: tab-group="IAM-simple"}
-{: class="simple-tab-table"}
-
-| Data Center | IP Range |
-|-----|-----|
-| **Required Flows**: placeholder| |
-| AMS01 | 10.2.66.0/24<br/>10.200.50.0/24 |
-| AMS03 | 10.3.130.0/24 |
-| CHE01 | 10.200.18.0/24 |
-| DAL01 | 10.0.78.0/24 |
-| DAL05 | 10.1.142.0/24<br/>10.1.138.0/24 |
-| DAL06 | 10.2.130.0/24 |
-| DAL07 | 10.1.178.0/24 |
-| DAL08 | 100.100.2.0/24 |
-| DAL09 | 10.2.114.0/24 |
-| DAL10 | 10.200.82.0/24 |
-| DAL12 | 10.200.114.0/24 |
-| DAL13 | 10.200.130.0/24 |
-| FRA02 | 10.3.82.0/24 |
-| FRA02AZ | 10.201.146.0/24 |
-| FRA04 | 10.201.114.0/24 |
-| FRA05 | 10.201.130.0/24 |
-| HKG02 | 10.2.162.0/24 |
-| HOU02 | 10.1.162.0/24 |
-| LON02 | 10.1.210.0/24 |
-| LON02AZ | 10.201.98.0/24 |
-| LON04 | 10.201.34.0/24 |
-| LON05 | 10.201.50.0/24 |
-| LON06 | 10.201.66.0/24 |
-| MEL01 | 10.2.82.0/24 |
-| MEX01 | 10.2.178.0/24 |
-| MIL01 | 10.3.146.0/24 |
-| MON01 | 10.3.114.0/24 |
-| OSL01 | 10.200.98.0/24 |
-| PAR01 | 10.2.146.0/24 |
-| SAO01 | 10.200.2.0/24 |
-| SEA01 | 10.1.78.0/24 |
-| SEO01 | 10.200.66.0/24 |
-| SJC01 | 10.1.194.0/24<br/>10.200.34.0/24 |
-| SJC03 | 10.3.178.0/24 |
-| SJC04 | 10.201.82.0/24 |
-| SNG01 | 10.2.34.0/24<br/>10.200.146.0/24 |
-| SYD01 | 10.3.98.0/24 |
-| SYD04 | 10.201.18.0/24 |
-| TOK02 | 10.3.66.0/24 |
-| TOK02AZ | 10.201.162.0/24 |
-| TOK04 | 10.201.178.0/24 |
-| TOK05 | 10.201.194.0/24 |
-| TOR01 | 10.2.50.0/24 |
-| WDC01 | 10.1.110.0/24<br/>10.1.106.0/24|
-| WDC03 | 100.100.34.0/24 |
-| WDC04 | 10.3.162.0/24 |
-| WDC04 | 10.201.2.0/24 |
-| WDC06 | 10.200.162.0/24 |
-| WDC07 | 10.200.178.0/24 |
-{: caption="Table 4. ICOS by Data Center" caption-side="left"}
-{: #simpletabtable4}
-{: tab-title="ICOS"}
-{: tab-group="IAM-simple"}
-{: class="simple-tab-table"}
+`*` - The 10.1.129.0/24 subnet, within the 10.1.128.0/19 master subnet, is used for Global service virtual IPs, which are not located in dal05.
+{: note}
 
 ## SSL VPN network (on backend/private network)
 ICMP – ping (for support troubleshooting)
@@ -475,6 +296,61 @@ All TCP/UDP ports (for access from your local workstation)
 |lax01|Los Angeles|California|USA|10.1.33.0/24|
 |mia01|Miami|Florida|USA|10.1.37.0/24|
 |nyc01|New York|New York|USA|10.1.45.0/24|
+
+## PPTP VPN Datacenters
+
+|Datacenter|City|State|Country|IP Range|
+|---|---|---|---|---|
+|ams01|Amsterdam|-|NLD|10.2.203.0/24|
+|ams03|Amsterdam|-|NLD|10.3.221.0/24|
+|che01|Chennai|-|IND|10.200.233.0/24|
+|dal01|Dallas|Texas|USA|10.1.3.0/24|
+|dal05|Dallas|Texas|USA|10.1.27.0/24|
+|dal06|Dallas|Texas|USA|10.2.211.0/24|
+|dal07|Dallas|Texas|USA|10.1.238.0/24|
+|dal08|Dallas|Texas|USA|100.101.128.0/24|
+|dal09|Dallas|Texas|USA|10.2.233.0/24|
+|dal10|Dallas|Texas|USA|10.200.229.0/24|
+|dal12|Dallas|Texas|USA|10.200.217.0/24|
+|dal13|Dallas|Texas|USA|10.200.213.0/24|
+|fra02|Frankfurt|-|DEU|10.2.237.0/24|
+|fra04|Frankfurt|-|DEU|10.3.197.0/24|
+|hkg02|Hong Kong|-|CHN|10.2.217.0/24|
+|hou02|Houston|Texas|USA|10.1.59.0/24|
+|lon02|London|-|ENG|10.2.221.0/24|
+|lon04|London|-|ENG|10.200.197.0/24|
+|lon06|London|-|ENG|10.3.201.0/24|
+|mel01|Melbourne|-|AUS|10.2.229.0/24|
+|mil01|Milan|-|ITA|10.3.217.0/24|
+|mon01|Montreal|-|CAN|10.3.255.0/24|
+|mex01|Mexico City|-|MEX|10.3.233.0/24|
+|par01|Paris|-|FRA|10.3.237.0/24|
+|sao01|São Paulo|-|BRA|10.200.237.0/24|
+|sea01|Seattle|Washington|USA|10.1.11.0/24|
+|seo01|-|South Korea|KOR|10.200.225.0/24|
+|sjc01|San Jose|California|USA|10.1.227.0/24|
+|sjc03|San Jose|California|USA|10.3.205.0/24|
+|sjc04|San Jose|California|USA|10.200.193.0/24|
+|sng01|Jurong East|-|SGP|10.2.195.0/24|
+|syd01|Sydney|-|AUS|10.3.229.0/24|
+|syd04|Sydney|-|AUS|10.200.201.0/24|
+|tok02|Tokyo|-|JPN|10.2.225.0/24|
+|tor01|Toronto|-|CAN|10.1.233.0/24|
+|wdc01|Washington D.C.|-|USA|10.1.19.0/24|
+|wdc04|Washington D.C.|-|USA|10.3.213.0/24|
+|wdc06|Washington D.C.|-|USA|10.200.209.0/24|
+|wdc07|Washington D.C.|-|USA|10.200.205.0/24|
+
+## PPTP VPN POPs
+
+|POP|City|State|Country|IP Range|
+|---|---|---|---|---|
+|atl01|Atlanta|Georgia|USA|10.1.42.0/24|
+|chi01|Chicago|Illinois|USA|10.1.40.0/24|
+|den01|Denver|Colorado|USA|10.1.54.0/24|
+|lax01|Los Angeles|California|USA|10.1.34.0/24|
+|mia01|Miami|Florida|USA|10.1.38.0/24|
+|nyc01|New York|New York|USA|10.1.46.0/24|
 
 ## Legacy Networks
 

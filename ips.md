@@ -297,61 +297,6 @@ All TCP/UDP ports (for access from your local workstation)
 |mia01|Miami|Florida|USA|10.1.37.0/24|
 |nyc01|New York|New York|USA|10.1.45.0/24|
 
-## PPTP VPN Datacenters
-
-|Datacenter|City|State|Country|IP Range|
-|---|---|---|---|---|
-|ams01|Amsterdam|-|NLD|10.2.203.0/24|
-|ams03|Amsterdam|-|NLD|10.3.221.0/24|
-|che01|Chennai|-|IND|10.200.233.0/24|
-|dal01|Dallas|Texas|USA|10.1.3.0/24|
-|dal05|Dallas|Texas|USA|10.1.27.0/24|
-|dal06|Dallas|Texas|USA|10.2.211.0/24|
-|dal07|Dallas|Texas|USA|10.1.238.0/24|
-|dal08|Dallas|Texas|USA|100.101.128.0/24|
-|dal09|Dallas|Texas|USA|10.2.233.0/24|
-|dal10|Dallas|Texas|USA|10.200.229.0/24|
-|dal12|Dallas|Texas|USA|10.200.217.0/24|
-|dal13|Dallas|Texas|USA|10.200.213.0/24|
-|fra02|Frankfurt|-|DEU|10.2.237.0/24|
-|fra04|Frankfurt|-|DEU|10.3.197.0/24|
-|hkg02|Hong Kong|-|CHN|10.2.217.0/24|
-|hou02|Houston|Texas|USA|10.1.59.0/24|
-|lon02|London|-|ENG|10.2.221.0/24|
-|lon04|London|-|ENG|10.200.197.0/24|
-|lon06|London|-|ENG|10.3.201.0/24|
-|mel01|Melbourne|-|AUS|10.2.229.0/24|
-|mil01|Milan|-|ITA|10.3.217.0/24|
-|mon01|Montreal|-|CAN|10.3.255.0/24|
-|mex01|Mexico City|-|MEX|10.3.233.0/24|
-|par01|Paris|-|FRA|10.3.237.0/24|
-|sao01|São Paulo|-|BRA|10.200.237.0/24|
-|sea01|Seattle|Washington|USA|10.1.11.0/24|
-|seo01|-|South Korea|KOR|10.200.225.0/24|
-|sjc01|San Jose|California|USA|10.1.227.0/24|
-|sjc03|San Jose|California|USA|10.3.205.0/24|
-|sjc04|San Jose|California|USA|10.200.193.0/24|
-|sng01|Jurong East|-|SGP|10.2.195.0/24|
-|syd01|Sydney|-|AUS|10.3.229.0/24|
-|syd04|Sydney|-|AUS|10.200.201.0/24|
-|tok02|Tokyo|-|JPN|10.2.225.0/24|
-|tor01|Toronto|-|CAN|10.1.233.0/24|
-|wdc01|Washington D.C.|-|USA|10.1.19.0/24|
-|wdc04|Washington D.C.|-|USA|10.3.213.0/24|
-|wdc06|Washington D.C.|-|USA|10.200.209.0/24|
-|wdc07|Washington D.C.|-|USA|10.200.205.0/24|
-
-## PPTP VPN POPs
-
-|POP|City|State|Country|IP Range|
-|---|---|---|---|---|
-|atl01|Atlanta|Georgia|USA|10.1.42.0/24|
-|chi01|Chicago|Illinois|USA|10.1.40.0/24|
-|den01|Denver|Colorado|USA|10.1.54.0/24|
-|lax01|Los Angeles|California|USA|10.1.34.0/24|
-|mia01|Miami|Florida|USA|10.1.38.0/24|
-|nyc01|New York|New York|USA|10.1.46.0/24|
-
 ## Legacy Networks
 
 |IP Range|

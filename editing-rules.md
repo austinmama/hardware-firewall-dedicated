@@ -2,7 +2,7 @@
 
 copyright:
   years: 2017,2018
-lastupdated: "2019-11-13"
+lastupdated: "2020-02-06"
 
 keywords: edit, rules, firewall
 
@@ -52,7 +52,7 @@ To edit the firewall rules:
 
     **Port Range:** These 2 fields indicate the range of ports (between 1 and 65535) that the rule will apply to.
 
-    **Protocol:** Selects the protocol the rule will apply to (TCP/GRE/ICMP/UDP/PPTP/AH/ESP)
+    **Protocol:** Selects the protocol the rule will apply to (TCP/GRE/ICMP/UDP/AH/ESP)
 
     **Notes:** Field to enter any note about this rule.
 
